@@ -1,0 +1,116 @@
+.navigation{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #333;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.navigation.active{
+  animation: identifier 0.8s ease-in-out ;
+  left: 0;
+}
+@keyframes identifier {
+  0%{
+    left:-50%;
+  }
+  100%{
+    left: 0;
+  }
+}
+.banner{
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+
+.cover{
+  background-size: cover;
+  background-image: url('./1.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.navLink{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+.navLink ul{
+  position: relative;
+  width: 100%;
+}
+.navLink ul li{
+  position: relative;
+  list-style: none;
+}
+.navLink ul li a{
+  position: relative;
+  color: #FFF;
+  font-size: 2em;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 5px 0;
+  margin-left: 100px;
+  display: inline-block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.navLink ul li a:hover
+{
+  color: #2196f3;
+}
+.toggles{
+  position: relative;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+ 
+}
+.toggles::before{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transform: translateY(6px) rotate(45deg);
+  transition: 0.5s;
+}
+.toggles::after{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transform: translateY(6px) rotate(-45deg);
+  transition: 0.5s;
+}
+
+.navigation.actives{
+  animation: rightleft 0.8s ease-in-out ;
+  left: -100%;
+}
+@keyframes rightleft {
+  0%{
+    left:0%;
+  }
+  100%{
+    left: -100%;
+  }
+}

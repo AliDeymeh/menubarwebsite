@@ -1,43 +1,38 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Body.css';
-const Body=(props)=>{
+import './Slide.css';
+import Slide from './Slide';
 
-  return(
-    <div className="navigation">
-  <div className="banner">
-    <img  className="cover"/>
+class Body extends React.Component{
+  state={   
+    showPersons:true
+  }
+  handelShowPersons=()=>{
+    this.setState({showPersons:!this.state.showPersons});
+  
+  }
 
+  render(){
+    const {showPersons}=this.state;
+    let person=null;
+    const c='active';
+    if(!showPersons){
+      person=<Slide classactive={c}></Slide>;    
+        
+    }
 
-  </div>
-  <div class="navLink">
-    <ul>
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-
-      <li>
-        <a href="#">Servisec</a>
-      </li>
-
-      <li>
-        <a href="#">Protofile</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-    </ul>
-  </div>
-</div>
-  )
-
-
-
-
+    return (
+    
+      <section className="sec">
+      
+          <header>
+        <div className="toggle" onClick={this.handelShowPersons}></div>
+        {person}
+        <a href="#" className="btn">Hireme</a>
+        </header>
+      </section>
+        );
+  }
 }
-
-
-
 export default Body;
+
