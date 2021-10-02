@@ -2,7 +2,8 @@ import React,{useState} from 'react';
 import './Body.css';
 import './Slide.css';
 import Slide from './Slide';
-
+import ImgSlide from './ImgSlide';
+import SoshalMedia from './SoshalMedia';
 class Body extends React.Component{
   state={   
     showPersons:true
@@ -23,14 +24,25 @@ class Body extends React.Component{
 
     return (
     
-      <section className="sec">
+     <div> <section className="sec">
       
-          <header>
-        <div className="toggle" onClick={this.handelShowPersons}></div>
-        {person}
-        <a href="#" className="btn">Hireme</a>
-        </header>
-      </section>
+     <header>
+   <div className="toggle" onClick={this.handelShowPersons}></div>
+   {person}
+   <a href="#" className="btn">برو بریم</a>
+   
+   </header>
+   
+  </section>
+ <div className="imgslide">
+   <ImgSlide></ImgSlide>
+ </div>
+ <footer>
+ <SoshalMedia></SoshalMedia>
+ </footer>
+ </div>
+
+   
         );
   }
 }

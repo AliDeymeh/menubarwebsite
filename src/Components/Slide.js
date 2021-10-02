@@ -17,21 +17,21 @@ const Slide=(props)=>{
   <div class="navLink">
     <ul>
       <li>
-        <a href="#">Home</a>
+        <a href="#">خانه</a>
       </li>
       <li>
-        <a href="#">About</a>
-      </li>
-
-      <li>
-        <a href="#">Servisec</a>
+        <a href="#">درباره ما</a>
       </li>
 
       <li>
-        <a href="#">Protofile</a>
+        <a href="#">سرویس ها</a>
+      </li>
+
+      <li>
+        <a href="#">نمونه کار</a>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <a href="#">ارتباط با ما</a>
       </li>
       <li><a className='toggles' onClick={removetoggle}></a></li>
     </ul>

@@ -1,6 +1,10 @@
 .sec{
   position: relative;
-}
+  padding: 100px;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  }
 header{
   position: absolute;
   top: 0;
@@ -11,6 +15,7 @@ header{
   align-items: center;
     width: 100%;
     transform: 0.5s;
+     
 }
 .toggle{
   position: relative;
@@ -22,7 +27,7 @@ header{
   align-items: center;
   cursor: pointer;
   transition: 0.5s;
-  
+
 }
 .toggle::before{
   content: '';
@@ -50,13 +55,33 @@ header{
   transform: translateY(0px) rotate(-45deg);
 }
 .btn{
+  font-family:"aviny";
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 25px;
   text-decoration: none;
   background-color: #ff1455;
   color: #fff;
   font-weight: 500;
   border-radius: 4px;
   letter-spacing: 1px;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: -1;
+}
+.imgslide{
+  margin: auto;
+  width:90%;
+  height:400px;
+  z-index: -1;
+  position: relative;
+  
+  
+}
+footer{
+  width: 350px;
+ 
+margin: 15px;
+margin-bottom: -100px;
+height: auto;
 }

@@ -1,7 +1,7 @@
 .navigation{
   position: fixed;
   top: 0;
-  left: -100%;
+  right: 100%;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -12,14 +12,14 @@
 }
 .navigation.active{
   animation: identifier 0.8s ease-in-out ;
-  left: 0;
+  right: 0;
 }
 @keyframes identifier {
   0%{
-    left:-50%;
+    right:50%;
   }
   100%{
-    left: 0;
+    right: 0;
   }
 }
 .banner{
@@ -56,16 +56,19 @@
   list-style: none;
 }
 .navLink ul li a{
+  font-family:"aviny";
   position: relative;
+  text-align: right;
   color: #FFF;
   font-size: 2em;
   font-weight: 500;
   text-decoration: none;
-  margin: 5px 0;
+  margin: 5px 50px;
   margin-left: 100px;
   display: inline-block;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition:0.5s all ease-in-out;
 }
 .navLink ul li a:hover
 {
@@ -81,36 +84,41 @@
   align-items: center;
   cursor: pointer;
   transition: 0.5s;
- 
+ margin-top: 50px;
 }
 .toggles::before{
   content: '';
   position: absolute;
   width: 30px;
-  height: 3px;
-  background-color: #fff;
+  height: 4px;
+  background-color: #ff2113;
   transform: translateY(6px) rotate(45deg);
   transition: 0.5s;
+  margin-top: 25px;
+  border-radius: 5px;
 }
 .toggles::after{
   content: '';
   position: absolute;
   width: 30px;
-  height: 3px;
-  background-color: #fff;
+  margin-top: 25px;
+  height: 4px;
+  background-color: #ff2113;
   transform: translateY(6px) rotate(-45deg);
   transition: 0.5s;
-}
+  border-radius: 5px;
+  }
 
 .navigation.actives{
   animation: rightleft 0.8s ease-in-out ;
-  left: -100%;
+  
+  right: -100%;
 }
 @keyframes rightleft {
   0%{
-    left:0%;
+    right:0%;
   }
   100%{
-    left: -100%;
+    right: -100%;
   }
 }
